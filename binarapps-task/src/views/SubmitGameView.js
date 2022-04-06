@@ -1,9 +1,9 @@
-export const SubmitGameView = ({nickname, choosenWords, gameList}) => {
+export const SubmitGameView = ({nickname, selectedWords, gameData}) => {
    
-    const gameResult = choosenWords.filter(obj => obj.result === true).length * 2 - 
-    (choosenWords.filter(obj => obj.result === false).length + 
-        (gameList.goodWords.length - gameList.goodWords.filter(word => choosenWords.some(obj => obj.word === word)).length)
-    )
+    const gameResult = selectedWords.filter(obj => obj.result === true).length * 2 - 
+        (selectedWords.filter(obj => obj.result === false).length + 
+            (gameData.goodWords.length - gameData.goodWords.filter(word => selectedWords.some(obj => obj.word === word)).length)
+        )
    
     return (
         <>
