@@ -1,0 +1,19 @@
+.wordsWrapper {
+    display: flex;
+}
+
+.wordsWrapper div {
+    width: fit-content;
+    border: 1px solid black;
+    padding: 7px;
+    margin: 5px;
+    cursor: pointer;
+
+}
+
+.clicked {
+
+    opacity: 0.5;
+ 
+}
+
