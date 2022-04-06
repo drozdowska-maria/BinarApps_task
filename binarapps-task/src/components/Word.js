@@ -4,19 +4,22 @@ export const Word = ({word, selectedWords, handleWordClick, checkResult, wordIsC
    
     return (
         //rendering for 'check-view' and selected words
-        checkResult && wordIsClicked ? <div>
-            <p>{selectedWords.find(obj => obj.word === word).result === true ? 'good' : 'bad'}</p>
-            <div 
+        checkResult && wordIsClicked ? <div className={styles.buttonWrapper}>
+            <p className={`${styles.adnotation} ${selectedWords.find(obj => obj.word === word).result === true ? styles.good : styles.bad}`}>{selectedWords.find(obj => obj.word === word).result === true ? '' : '+'}</p>
+            <button 
+            disabled={checkResult}
             className={`${styles.wordItem} 
-            ${selectedWords.find(obj => obj.word === word).result === true ? styles.green : styles.red} ` }>{word}
-            </div>
+            ${selectedWords.find(obj => obj.word === word).result === true ? styles.green : styles.red}`}>{word}
+            
+            </button>
         </div>
         :
         //rendering for other views
-        <div 
+        <button
             className={`${styles.wordItem} ${wordIsClicked && !checkResult ? styles.clicked : ''}`} 
             onClick={() => handleWordClick(word)}
+            disabled={checkResult}
             >{word}
-        </div> 
+        </button> 
     )}
     

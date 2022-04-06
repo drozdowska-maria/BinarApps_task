@@ -3,6 +3,12 @@ import { getGameData } from "./utils/db";
 import { GameView } from "./views/GameView";
 import { InputView } from "./views/InputView";
 import { SubmitGameView } from "./views/SubmitGameView";
+import './App.css'
+
+//TODO: fix login required bug
+//fix bug that allows you to submit game without playing
+
+
 
 function App() {
   //STATES
@@ -17,7 +23,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className="main-wrapper">
     {view === 'input-view' && <InputView 
         nickname={nickname} 
         setNickname={setNickname} 
@@ -32,7 +38,7 @@ function App() {
         nickname={nickname} 
         gameData={gameData} 
         selectedWords={selectedWords}/>}
-    </>
+    </div>
    
   ); 
 }

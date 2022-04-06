@@ -1,15 +1,30 @@
 .wordsWrapper {
-    width:15%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 20px;
+}
+
+.header {
+    font-size: 35px;
+    color: var(--dark-main-color);
+}
+
+.buttonWrapper {
+    position: relative;
+
 }
 
 .wordItem {
     width: fit-content;
-    border: 1px solid black;
-    padding: 7px;
-    margin: 5px;
+    padding: 7px 15px 7px 15px;
+    margin: 14px 5px 14px 5px;
+    border: 2px solid var(--light-main-color);
+    border-radius: 15px;
+    font-weight: 700;
+    background-color: var(--background-color);
+    color: var(--light-main-color);
     cursor: pointer;
 }
 
@@ -23,12 +38,35 @@
 }
 
 .red {
-    border: 2px solid red;
-    color: red;
+    border: 2px solid rgb(165, 50, 50);
+    box-shadow: inset 0px 0px 4px 2px #ff000033;
+    color: #ff0000;
 }
 
 .green {
-    border: 2px solid green;
-    color: green;
+    border: 2px solid #62b87e;
+    box-shadow: inset 0px 0px 4px 2px #1fff0133;
+    color: #29d412;
 }
 
+.adnotation {
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.good {
+    width: 15px;
+    height: 6px;
+    transform: translateX(4px) rotate(-45deg);
+    border-bottom: 2px solid #1fff01;
+    border-left: 2px solid #1fff01;
+}
+
+.bad {
+    font-size: 30px;
+    font-weight: 100;
+    transform: translateX(10px) translateY(-6px) rotate(-45deg);
+    color: #ff0000;
+
+}

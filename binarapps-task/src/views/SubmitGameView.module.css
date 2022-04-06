@@ -1,0 +1,19 @@
+
+.header {
+    font-size: 40px;
+    color: var(--light-main-color);
+}
+
+.header strong {
+    color: var(--dark-main-color);
+}
+.text {
+    margin-top: 30px;
+    font-size: 30px;
+    color: var(--light-main-color);
+}
+.result {
+    margin-bottom: 50px;
+    font-size: 48px;
+    color: var(--dark-main-color);
+}

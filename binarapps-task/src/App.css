@@ -1,0 +1,60 @@
+* {
+    font-family: 'Comfortaa';
+    margin: 0;
+    box-sizing: border-box;
+    --dark-main-color: #340c91;
+    --light-main-color: #6182c9;
+    --button-color: #6fd60e;
+    --light-button-color: #000000;
+    --light-shadow-color: #6681db7a; 
+    --dark-shadow-color: #a8ff5754; 
+    --background-color: #ffffff;
+    --dark-button-color: #71b800;
+}
+
+#root {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #253fb4a2;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 4px var(--light-shadow-color);
+}
+
+.submit-button {
+    width: fit-content;
+    height: 40px;
+    padding: 10px; 
+    border: 0px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--button-color);
+    background-color: var(--background-color);
+    color: var(--dark-button-color);
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    border: 2px solid var(--dark-main-color);
+    box-shadow: 0px 0px 4px 2px #33333320;
+    color: var(--dark-main-color);
+}
+
+.submit-button:active {
+    box-shadow: inset 0px 0px 4px 3px var(--dark-shadow-color);
+}

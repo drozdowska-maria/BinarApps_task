@@ -30,8 +30,8 @@ export const GameView = ({gameData, setSelectedWords, selectedWords, setView}) =
     }
 
     return (
-        <div>
-            <h3>{gameData.question}</h3>
+        <>
+            <h3 className={styles.header}>{gameData.question}</h3>
             <div className={styles.wordsWrapper}>
                 {gameData.allWords
                     .map((word, index) => <Word 
@@ -43,7 +43,7 @@ export const GameView = ({gameData, setSelectedWords, selectedWords, setView}) =
                     handleWordClick={handleWordClick}
                     />)}
             </div>
-            <button onClick={handleButtonClick}>{!checkResult ? 'Check result' : 'Submit game'}</button>
-        </div>
+            <button className="submit-button" onClick={handleButtonClick}>{!checkResult ? 'Check result' : 'Submit game'}</button>
+        </>
     )
 }

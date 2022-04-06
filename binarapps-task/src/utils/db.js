@@ -20,7 +20,7 @@ const getGameData = async (callback) => {
         allWords: doc.data().all_words,
         goodWords: doc.data().good_words,
     }))
-    const i =  Math.floor(Math.random() * gameList.length)
+    const i =  Math.floor(Math.random() * gameList.length) //get random element of an array
     callback(gameList[i])
 }
 

@@ -1,0 +1,49 @@
+.inputHeader {
+    font-size: 51px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-align: end;
+    color: var(--light-main-color);
+}
+
+.inputHeader strong {
+    color: var(--dark-main-color);
+}
+
+.form {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.input {
+    position: absolute;
+    right: 0px;
+    width: fit-content;
+    height: 40px;
+    padding: 0px 100px 0px 25px;
+    border: 0px;
+    border-radius: 20px;
+    background-color: var(--light-shadow-color);
+    box-shadow: inset 0px 0px 3px 3px var(--light-shadow-color);   
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--light-button-color);
+    letter-spacing: 0.05em;
+}
+
+.input::placeholder {
+    letter-spacing: 0;
+    color: var(--dark-main-color);
+    font-weight: 100;
+}
+
+.input:focus-visible {
+    outline: none;
+    border: 2px solid var(--light-main-color)
+}
+
+.inputButton {
+    position: absolute;
+    right: 0px;
+}
