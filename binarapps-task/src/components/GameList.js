@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './GameList.module.css'
 
-export const GameList = ({gameList, setChoosenWords, choosenWords}) => {
+export const GameList = ({gameList, setChoosenWords, choosenWords, setView}) => {
 
     const [checkResult, setCheckResult] = useState(false)
 
@@ -14,8 +14,12 @@ export const GameList = ({gameList, setChoosenWords, choosenWords}) => {
         }
     }
 
-    const handleCheckClick = () => {
-        setCheckResult(true)
+    const handleButtonClick = () => {
+        if(!checkResult) {
+            setCheckResult(true)
+        } else {
+            setView('submit-game-view')
+        }
     }
 
     return (
@@ -37,7 +41,7 @@ export const GameList = ({gameList, setChoosenWords, choosenWords}) => {
                     {word}</div>
                 </div>)}
         </div>
-        <button onClick={handleCheckClick}>{!checkResult ? 'Check result' : 'Submit game'}</button>
+        <button onClick={handleButtonClick}>{!checkResult ? 'Check result' : 'Submit game'}</button>
         </div>
     )
 }

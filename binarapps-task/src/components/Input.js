@@ -1,8 +1,8 @@
-export const Input = ({nickname, setNickname, setIsLogged}) => {
+export const Input = ({nickname, setNickname, setView}) => {
    
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsLogged(true)
+        setView('game-view')
     }
     return (
 
