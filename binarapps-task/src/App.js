@@ -15,10 +15,10 @@ function App() {
   return (
     <>
     {!isLogged && <InputView nickname={nickname} setNickname={setNickname} setIsLogged={setIsLogged}/>}
-    {isLogged &&<GameView nickname={nickname}/>}
+    {isLogged &&<GameView nickname={nickname} gameList={gameList}/>}
     </>
    
-  );
+  ); 
 }
 
 export default App;
