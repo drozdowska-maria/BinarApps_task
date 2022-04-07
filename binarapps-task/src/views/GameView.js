@@ -1,10 +1,19 @@
-import { useState } from 'react'
-import { Word } from '../components/Word';
-import styles from './GameView.module.css'
+import { useEffect, useState } from "react";
+import { Word } from "../components/Word";
+import styles from "./GameView.module.css";
 
 export const GameView = ({gameData, setSelectedWords, selectedWords, setView}) => {
-    //creating a state to manage conditional rendering 
-    const [checkResult, setCheckResult] = useState(false);
+    
+    const [checkResult, setCheckResult] = useState(false); //creating a state to manage conditional rendering 
+    const [enableCheckView, setEnableCheckView] = useState(false); //creating a state to enable/disable button
+
+    useEffect(() => {
+        if (selectedWords.length === 0){
+            setEnableCheckView(true)
+        } else {
+            setEnableCheckView(false)
+        }
+    }, [selectedWords]) //listen to selectedWords state changes to enable/disable button
 
     //declaring function that manages clicking the word
     const handleWordClick = (clickedWord) => {
@@ -24,7 +33,7 @@ export const GameView = ({gameData, setSelectedWords, selectedWords, setView}) =
         if(!checkResult) {
             setCheckResult(true); //run 'check-view' if it's not already running
         } else {
-            setView('submit-game-view');
+            setView("submit-game-view");
             setCheckResult(false); //if it is: display submit game view and end 'check-view'
         }
     }
@@ -43,7 +52,7 @@ export const GameView = ({gameData, setSelectedWords, selectedWords, setView}) =
                     handleWordClick={handleWordClick}
                     />)}
             </div>
-            <button className="submit-button" onClick={handleButtonClick}>{!checkResult ? 'Check result' : 'Submit game'}</button>
+            <button className="submit-button" onClick={handleButtonClick} disabled={enableCheckView}>{!checkResult ? "Check result" : "Submit game"}</button>
         </>
     )
 }

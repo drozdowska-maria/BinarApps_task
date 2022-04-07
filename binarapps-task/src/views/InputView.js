@@ -1,5 +1,5 @@
 import { Input } from "../components/Input";
-import styles from './InputView.module.css'
+import styles from "./InputView.module.css";
 
 export const InputView = ({
     nickname, 

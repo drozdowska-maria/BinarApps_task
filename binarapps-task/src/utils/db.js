@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, getDocs, collection } from 'firebase/firestore'
+import { getFirestore, getDocs, collection } from "firebase/firestore";
+
 const firebaseConfig = {
   apiKey: "AIzaSyClee57-ePzmUkiwPWvYXPaB9Gj-h4W-Fo",
   authDomain: "binarapps-task.firebaseapp.com",

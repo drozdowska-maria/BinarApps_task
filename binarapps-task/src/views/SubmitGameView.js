@@ -1,4 +1,4 @@
-import styles from './SubmitGameView.module.css'
+import styles from "./SubmitGameView.module.css";
 
 export const SubmitGameView = ({nickname, selectedWords, gameData}) => {
    
@@ -9,9 +9,9 @@ export const SubmitGameView = ({nickname, selectedWords, gameData}) => {
    
     return (
         <>
-        <h2 className={styles.header}>Congrats, <strong>{nickname}!</strong></h2>
+        <h2 className={styles.header}>{gameResult <= 0 ? "Sorry, " : "Congrats, "}<strong>{nickname}!</strong></h2>
         <h2 className={styles.text}>Your score:</h2>
-        <h1 className={styles.result}>{gameResult === -1 || gameResult === 1 ? `${gameResult} point` : `${gameResult} points`}</h1>
+        <h1 className={styles.result}>{gameResult} {gameResult === -1 || gameResult === 1 ? "point" : "points"}</h1>
         </>
     )
 }

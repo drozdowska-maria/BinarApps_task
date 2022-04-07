@@ -26,16 +26,16 @@
     border-radius: 20px;
     background-color: var(--light-shadow-color);
     box-shadow: inset 0px 0px 3px 3px var(--light-shadow-color);   
-    font-weight: 700;
     font-size: 14px;
-    color: var(--light-button-color);
+    font-weight: 700;
     letter-spacing: 0.05em;
+    color: #333333;
 }
 
 .input::placeholder {
+    font-weight: 100;
     letter-spacing: 0;
     color: var(--dark-main-color);
-    font-weight: 100;
 }
 
 .input:focus-visible {
@@ -47,3 +47,4 @@
     position: absolute;
     right: 0px;
 }
+
